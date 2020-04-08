@@ -1,0 +1,172 @@
+html{
+	background-color: #112330;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+.header{
+  height: 100px;
+  background: #002d72;
+  padding: 0 20px;
+  color: #fff;
+}
+.logou{
+  line-height: 100px;
+  margin-left: 15px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+  float: left;
+  text-transform: uppercase;
+}
+.logo{
+  line-height: 100px;
+  margin-left: 80px;
+  float: left;
+  text-transform: uppercase;
+}
+
+.menu{
+  float: right;
+  margin-right: 15px;
+  line-height: 100px;
+  font-size: 15px;
+}
+.menu a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.show-menu-btn,.hide-menu-btn{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.show-menu-btn{
+  float: right;
+}
+.show-menu-btn i{
+  line-height: 100px;
+}
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+  color: #3498db;
+}
+
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+.content{
+  padding: 0 20px;
+}
+.content img{
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+}
+.content p{
+  text-align: justify;
+}
+
+.footer-basic-centered{
+	background-color: #002d72;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font: normal 18px sans-serif;
+
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.footer-basic-centered .footer-company-motto{
+	color:  #8d9093;
+	font-size: 24px;
+	margin: 20px;
+}
+
+.footer-basic-centered .footer-company-name{
+	color:  #FFFFFF;
+	font-size: 14px;
+	margin: 1px;
+}
+
+.footer-basic-centered .footer-links{
+	list-style: none;
+	font-weight: bold;
+	color:  #ffffff;
+	padding: 35px 0 23px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links a{
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer-basic-centered{
+		padding: 35px;
+	}
+
+	.footer-basic-centered .footer-company-motto{
+		font-size: 18px;
+	}
+
+	.footer-basic-centered .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-basic-centered .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer-basic-centered .footer-links a{
+		line-height: 1.8;
+	}
+}
+
+@media screen and (max-width:800px) {
+  .show-menu-btn,.hide-menu-btn{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+  }
+  .menu a{
+    display: block;
+    padding: 20px;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+  }
+
+}
